@@ -20,7 +20,7 @@
 ```L_bar``` - Using RBF/Matern kernel for time feature
 
 ### Example
-```AN_barCL_bar``` - GP with ARD enabled stationary kernel with categorical kernel for categorical features and Local periodic kernel for time feature
+```AN_barCL_bar``` - GP with ARD enabled stationary kernel with categorical kernel for categorical features and RBF/Matern kernel for time feature
 
 ## Folder-wise description
 
