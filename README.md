@@ -1,5 +1,9 @@
 # AAAI22
 
+EDIT:
+* [Extended Rebuttal]()
+* [Extended Appendix]()
+
 ## Main approach configuration
 
 ### Encoding
