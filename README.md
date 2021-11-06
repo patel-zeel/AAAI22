@@ -1,8 +1,8 @@
 # AAAI22
 
 EDIT:
-* [Extended Rebuttal]()
-* [Extended Appendix]()
+* [Extended Rebuttal](https://github.com/ouranonymoussubmission/AAAI22/blob/main/Rebuttal.md)
+* [Extended Appendix](https://github.com/ouranonymoussubmission/AAAI22/blob/main/Appendix_v2.pdf)
 
 ## Main approach configuration
 
