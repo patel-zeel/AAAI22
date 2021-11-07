@@ -59,7 +59,7 @@ Log Predictive Density (LPD) is a log probability of sampling the test data give
 
 * Mean Standardized Log Loss (MSLL)
 
-Standardized Log Loss (LL) is log probability of sampling a test data point given univariate normal distribution with mean as predictive mean and variance as predictive variance for the data point. An average of this metric over all the data points is called as Mean Standardized Log Loss (MSLL).
+Standardized Log Loss (LL) is negative log probability of sampling a test data point given univariate normal distribution with mean as predictive mean and variance as predictive variance for the data point. An average of this metric over all the data points is called as Mean Standardized Log Loss (MSLL).
 
 * [CE (Coverage Error)](https://arxiv.org/pdf/1710.01720v1.pdf)
 
@@ -70,16 +70,17 @@ A predictive distribution is called well-calibrated if x% of samples lie within 
 <details open>
 <summary>Root Mean Squared Error (lower is better)</summary>
 
-| Model | Fold-0 | Fold-1 | Fold-2 | Fold-3 | Mean |
-| :- | -:| -:| -:| -:| -:|
-|ARD ✖ N ✖ Cat.✖ Per. ✖	| 5.06 | 4.32 | 5.61	| 4.45 | 4.86 |
-|ARD ✔ N ✖ Cat.✖ Per. ✖	| **4.82** | 3.99 | 5.57	| 4.18 | **4.64** |
-|ARD ✔ N ✖ Cat.✖ Per. ✔	| 4.83 | **3.99** | 5.60	| **4.16** | 4.65 |
-|RF	                    | 5.16 | 4.64 | **4.78** | 4.17 | 4.69 |
-|IDW	                    | 7.79 | 7.48 | 8.61 | 8.15 | 8.01 |
-|KNN	                    | 5.32 | 4.38 | 5.10 | 4.18 | 4.75 |
-|XGB	                    | 5.50 | 4.57 | 4.84 | 4.70 | 4.90 |
-|ADAIN	                 | 5.26 | 4.41 | 4.95 | 4.51 | 4.78 |
+| Model | Fold-0 | Fold-1 | Fold-2 | Mean |
+| :- | -:| -:| -:| -:|
+|ARD ✖ N ✖ Cat.✖ Per. ✖ |37.25 | 39.86 | 36.73 | 37.95|
+|ARD ✔ N ✖ Cat.✖ Per. ✖ |23.63 | 25.52 | 25.97 | 25.04|
+|ARD ✔ N ✖ Cat.✔ Per. ✔ |22.24 | 24.74 | 25.1 | 24.03|
+|ARD ✔ N ✖ Cat.✔ Per. ✔ |22.6 | 24.96 | 25.27 | 24.28|
+|RF                        |24.86 | 29.78 | 25.4 | 26.68|
+|IDW                     |49.11 | 50 | 45.18 | 48.1|
+|KNN                     |38.09 | 38.85 | 37.02 | 37.99|
+|XGB                     |34.07 | 34.23 | 33.25 | 33.85|
+|ADAIN                     |31.86 | 28.39 | 27.91 | 29.39|
 
    
 </details>
@@ -87,75 +88,80 @@ A predictive distribution is called well-calibrated if x% of samples lie within 
 <details>
 <summary>Mean Absolute Error (lower is better)</summary>
 
-| Model | Fold-0 | Fold-1 | Fold-2 | Fold-3 | Mean |
-| :- | -:| -:| -:| -:| -:|
-|ARD ✖ N ✖ Cat.✖ Per. ✖	 | 3.07 | 2.93 | 3.92 | 3.38 | 3.33 |
-|ARD ✔ N ✖ Cat.✖ Per. ✖	 | **2.87** | **2.76** | 3.92 | 3.19 | **3.19** |
-|ARD ✔ N ✖ Cat.✖ Per. ✔	 | 2.88 | 2.76 | 3.98 | 3.19 | 3.20 |
-|RF	                     | 2.88 | 2.76 | 3.98 | 3.19 | 3.20 |
-|IDW	                     | 2.88 | 2.76 | 3.98 | 3.19 | 3.20 |
-|KNN	                     | 3.25 | 3.16 | **3.25** | **3.15** | 3.20 |
-|XGB	                     | 3.52 | 3.31 | 3.32 | 3.62 | 3.44 |
-|ADAIN	                  |      |      |      |      |      |
+| Model | Fold-0 | Fold-1 | Fold-2 | Mean |
+| :- | -:| -:| -:| -:|
+|ARD ✖ N ✖ Cat.✖ Per. ✖ |25.85 | 29.51 | 24.61 | 26.66|
+|ARD ✔ N ✖ Cat.✖ Per. ✖ |14.28 | 18.26 | 14.88 | 15.81|
+|ARD ✔ N ✖ Cat.✔ Per. ✔ |13.06 | 17.35 | 14.69 | 15.03|
+|ARD ✔ N ✖ Cat.✔ Per. ✔ |13.37 | 17.48 | 14.85 | 15.23|
+|RF                        |14.16 | 17.96 | 14.64 | 15.59|
+|IDW                     |34.79 | 38.35 | 31.24 | 34.79|
+|KNN                     |24.57 | 26.41 | 23.42 | 24.8|
+|XGB                     |24.07 | 24.4 | 23.36 | 23.94|
+|ADAIN                     |19.37 | 18.34 | 18.78 | 18.83|
 
 </details>
 
 <details>
 <summary>Mean Absolute Percentage Error (lower is better)</summary>
 
-| Model | Fold-0 | Fold-1 | Fold-2 | Fold-3 | Mean |
-| :- | -:| -:| -:| -:| -:|
-|ARD ✖ N ✖ Cat.✖ Per. ✖	 |34% |29% | 87% |38% |47% |
-|ARD ✔ N ✖ Cat.✖ Per. ✖	 | 32% |27% |88% |35% |46% |
-|ARD ✔ N ✖ Cat.✖ Per. ✔	 | **32%** | **27%** |89% |**35%** |46% |
-|RF	                     |32% |30% |**71%** |36% |**42%**|
-|IDW	                     |51% |46% |131% |57% |71% |
-|KNN	                     |32% |31% |78% |35% |44% |
-|XGB	                     |40% |35% |78% |40% |48% |
-|ADAIN	                  |      |      |      |      |      |
+| Model | Fold-0 | Fold-1 | Fold-2 | Mean |
+| :- | -:| -:| -:| -:|
+|ARD ✖ N ✖ Cat.✖ Per. ✖ |0.68 | 1.18 | 0.64 | 0.83|
+|ARD ✔ N ✖ Cat.✖ Per. ✖ |0.3 | 0.71 | 0.31 | 0.44|
+|ARD ✔ N ✖ Cat.✔ Per. ✔ |0.27 | 0.69 | 0.3 | 0.42|
+|ARD ✔ N ✖ Cat.✔ Per. ✔ |0.28 | 0.69 | 0.31 | 0.43|
+|RF                        |0.29 | 0.48 | 0.3 | 0.36|
+|IDW                     |1.04 | 1.73 | 1.07 | 1.28|
+|KNN                     |0.55 | 0.82 | 0.53 | 0.63|
+|XGB                     |0.61 | 0.79 | 0.69 | 0.7|
+|ADAIN                     |0.56 | 0.44 | 0.44 | 0.48|
 
 </details>
 
 <details>
 <summary>R^2 Score (higher is better)</summary>
 
-| Model | Fold-0 | Fold-1 | Fold-2 | Fold-3 | Mean |
-| :- | -:| -:| -:| -:| -:|
-|ARD ✖ N ✖ Cat.✖ Per. ✖ |0.66 | 0.73 | 0.53 | 0.71 | 0.66|
-|ARD ✔ N ✖ Cat.✖ Per. ✖ |**0.69** | **0.77** | 0.54 | **0.74** | **0.69**|
-|ARD ✔ N ✖ Cat.✖ Per. ✔ |**0.69** | **0.77** | **0.53** | **0.74** | 0.68|
-|RF                        |0.64 | 0.69 | 0.66 | 0.74 | 0.68|
-|IDW                     |0.19 | 0.20 | -0.10 | 0.02 | 0.08|
-|KNN                     |0.62 | 0.73 | 0.61 | 0.74 | 0.68|
-|XGB                     |0.60 | 0.70 | 0.65 | 0.67 | 0.66|
-|ADAIN	                  |      |      |      |      |      |
+| Model | Fold-0 | Fold-1 | Fold-2 | Mean |
+| :- | -:| -:| -:| -:|
+|ARD ✖ N ✖ Cat.✖ Per. ✖ |0.77 | 0.69 | 0.77 | 0.74|
+|ARD ✔ N ✖ Cat.✖ Per. ✖ |0.91 | 0.87 | 0.89 | 0.89|
+|ARD ✔ N ✖ Cat.✔ Per. ✔ |0.92 | 0.88 | 0.89 | 0.9|
+|ARD ✔ N ✖ Cat.✔ Per. ✔ |0.91 | 0.88 | 0.89 | 0.89|
+|RF                        |0.9 | 0.83 | 0.89 | 0.87|
+|IDW                     |0.6 | 0.51 | 0.65 | 0.59|
+|KNN                     |0.76 | 0.71 | 0.77 | 0.75|
+|XGB                     |0.81 | 0.77 | 0.81 | 0.8|
+|ADAIN                     |0.48 | 0.58 | 0.61 | 0.56|
 
 </details>
 
 <details>
 <summary>Negative Log Predictive Density (lower is better)</summary>
 
-| Model | Fold-0 | Fold-1 | Fold-2 | Fold-3 | Mean |
-| :- | -:| -:| -:| -:| -:|
-|ARD ✖ N ✖ Cat.✖ Per. ✖ |**12,905.88** | 11,909.78 | 10,528.24 | 10,347.43| 11,422.83 |
-|ARD ✔ N ✖ Cat.✖ Per. ✖ |13,046.91 | 11,691.14 | **10,261.17** | 9,994.86| **11,248.52** |
-|ARD ✔ N ✖ Cat.✖ Per. ✔ |13,226.03 | **11,659.61** | 10,284.22 | **9,926.65**| 11,274.13 |
+| Model | Fold-0 | Fold-1 | Fold-2 | Mean |
+| :- | -:| -:| -:| -:|
+|ARD ✖ N ✖ Cat.✖ Per. ✖ |363,785.63 | 355,416.47 | 336,014.44 | 351,738.84|
+|ARD ✔ N ✖ Cat.✖ Per. ✖ |166,680.38 | 176,821.81 | 167,478.70 | 170,326.96|
+|ARD ✔ N ✖ Cat.✔ Per. ✔ |149,838.16 | 155,413.97 | 157,293.14 | 154,181.76|
+|ARD ✔ N ✖ Cat.✔ Per. ✔ |134,164.84 | 140,730.25 | 138,787.03 | 137,894.04|
 |RF                        |- | - | - | -|
 |IDW                     |- | - | - | -|
 |KNN                     |- | - | - | -|
 |XGB                     |- | - | - | -|
-|ADAIN	                 |- | - | - | -|
+|ADAIN                     |- | - | - | -|
 
 </details>
 
 <details>
 <summary>Mean Standardized Log Loss (lower is better)</summary>
 
-| Model | Fold-0 | Fold-1 | Fold-2 | Fold-3 | Mean |
-| :- | -:| -:| -:| -:| -:|
-|ARD ✖ N ✖ Cat.✖ Per. ✖ |3.25 | 2.92 | **3.39** | 3.04 | 3.15|
-|ARD ✔ N ✖ Cat.✖ Per. ✖ |**3.21** | **2.83** | 3.42 | 2.94 | **3.10**|
-|ARD ✔ N ✖ Cat.✖ Per. ✔ |3.28 | 2.84 | 3.42 | **2.93** | 3.12|
+| Model | Fold-0 | Fold-1 | Fold-2 | Mean |
+| :- | -:| -:| -:| -:|
+|ARD ✖ N ✖ Cat.✖ Per. ✖ |47.89 | 52.77 | 46.45 | 49.04|
+|ARD ✔ N ✖ Cat.✖ Per. ✖ |26.64 | 31.47 | 30.08 | 29.40|
+|ARD ✔ N ✖ Cat.✔ Per. ✔ |24.58 | 28.75 | 30.27 | 27.87|
+|ARD ✔ N ✖ Cat.✔ Per. ✔ |21.96 | 25.84 | 26.26 | 24.69|
 |RF                        |- | - | - | -|
 |IDW                     |- | - | - | -|
 |KNN                     |- | - | - | -|
@@ -166,26 +172,29 @@ A predictive distribution is called well-calibrated if x% of samples lie within 
 <details>
 <summary>Coverage Error (68% or 1 standard deviation) (lower is better)</summary>
 
-| Model | Fold-0 | Fold-1 | Fold-2 | Fold-3 | Mean |
-| :- | -:| -:| -:| -:| -:|
-|ARD ✖ N ✖ Cat.✖ Per. ✖ |0.02 | 0.02 | 0.10 | 0.12 | 0.07|
-|ARD ✔ N ✖ Cat.✖ Per. ✖ |0.03 | 0.03 | 0.11 | 0.10 | 0.07|
-|ARD ✔ N ✖ Cat.✖ Per. ✔ |**0.01** | **0.02** | **0.10** | **0.10** | **0.06**|
+| Model | Fold-0 | Fold-1 | Fold-2 | Mean |
+| :- | -:| -:| -:| -:|
+|ARD ✖ N ✖ Cat.✖ Per. ✖ |0.57 | 0.59 | 0.55 | 0.57|
+|ARD ✔ N ✖ Cat.✖ Per. ✖ |0.46 | 0.53 | 0.45 | 0.48|
+|ARD ✔ N ✖ Cat.✔ Per. ✔ |0.45 | 0.52 | 0.45 | 0.47|
+|ARD ✔ N ✖ Cat.✔ Per. ✔ |0.43 | 0.51 | 0.44 | 0.46|
 |RF                        |- | - | - | -|
 |IDW                     |- | - | - | -|
 |KNN                     |- | - | - | -|
 |XGB                     |- | - | - | -|
 |ADAIN                     |- | - | - | -|
+
 </details>
 
 <details>
 <summary>Coverage Error (95% or 2 standard deviation) (lower is better)</summary>
 
-| Model | Fold-0 | Fold-1 | Fold-2 | Fold-3 | Mean |
-| :- | -:| -:| -:| -:| -:|
-|ARD ✖ N ✖ Cat.✖ Per. ✖ |0.04 | 0.03 | 0.09 | 0.09 | 0.06|
-|ARD ✔ N ✖ Cat.✖ Per. ✖ |0.04 | 0.03 | 0.12 | 0.07 | 0.06|
-|ARD ✔ N ✖ Cat.✖ Per. ✔ |0.05 | 0.03 | 0.12 | 0.07 | 0.07|
+| Model | Fold-0 | Fold-1 | Fold-2 | Mean |
+| :- | -:| -:| -:| -:|
+|ARD ✖ N ✖ Cat.✖ Per. ✖ |0.73 | 0.77 | 0.69 | 0.73|
+|ARD ✔ N ✖ Cat.✖ Per. ✖ |0.54 | 0.67 | 0.54 | 0.58|
+|ARD ✔ N ✖ Cat.✔ Per. ✔ |0.51 | 0.65 | 0.53 | 0.57|
+|ARD ✔ N ✖ Cat.✔ Per. ✔ |0.50 | 0.64 | 0.51 | 0.55|
 |RF                        |- | - | - | -|
 |IDW                     |- | - | - | -|
 |KNN                     |- | - | - | -|
@@ -196,11 +205,12 @@ A predictive distribution is called well-calibrated if x% of samples lie within 
 <details>
 <summary>Coverage Error (99% or 3 standard deviation) (lower is better)</summary>
 
-| Model | Fold-0 | Fold-1 | Fold-2 | Fold-3 | Mean |
-| :- | -:| -:| -:| -:| -:|
-|ARD ✖ N ✖ Cat.✖ Per. ✖ |0.04 | 0.02 | 0.06 | 0.03 | 0.04|
-|ARD ✔ N ✖ Cat.✖ Per. ✖ |0.03 | 0.02 | 0.06 | 0.02 | 0.03|
-|ARD ✔ N ✖ Cat.✖ Per. ✔ |0.03 | 0.02 | 0.05 | 0.02 | 0.03|
+| Model | Fold-0 | Fold-1 | Fold-2 | Mean |
+| :- | -:| -:| -:| -:|
+|ARD ✖ N ✖ Cat.✖ Per. ✖ |0.66 | 0.73 | 0.62 | 0.67|
+|ARD ✔ N ✖ Cat.✖ Per. ✖ |0.45 | 0.59 | 0.45 | 0.49|
+|ARD ✔ N ✖ Cat.✔ Per. ✔ |0.42 | 0.57 | 0.45 | 0.48|
+|ARD ✔ N ✖ Cat.✔ Per. ✔ |0.40 | 0.55 | 0.42 | 0.46|
 |RF                        |- | - | - | -|
 |IDW                     |- | - | - | -|
 |KNN                     |- | - | - | -|
