@@ -80,3 +80,44 @@ We perform 4-fold cross-validation by splitting the train and test sets based on
 
 </details>
 
+<details>
+<summary>Mean Absolute Percentage Error</summary>
+
+| Model | Fold-0 | Fold-1 | Fold-2 | Fold-3 | Mean |
+| :- | -:| -:| -:| -:| -:|
+|ARD ✖ N ✖ Cat.✖ Per. ✖	 |34% |29% | 87% |38% |47% |
+|ARD ✔ N ✖ Cat.✖ Per. ✖	 | 32% |27% |88% |35% |46% |
+|ARD ✔ N ✖ Cat.✖ Per. ✔	 | **32%** | **27%** |89% |**35%** |46% |
+|RF	                     |32% |30% |**71%** |36% |**42%**|
+|IDW	                     |51% |46% |131% |57% |71% |
+|KNN	                     |32% |31% |78% |35% |44% |
+|XGB	                     |40% |35% |78% |40% |48% |
+|ADAIN	                  |      |      |      |      |      |
+
+</details>
+
+<details>
+<summary>R^2 Score</summary>
+
+| Model | Fold-0 | Fold-1 | Fold-2 | Fold-3 | Mean |
+| :- | -:| -:| -:| -:| -:|
+|ARD ✖ N ✖ Cat.✖ Per. ✖ |0.66 | 0.73 | 0.53 | 0.71 | 0.66|
+|ARD ✔ N ✖ Cat.✖ Per. ✖ |**0.69** | **0.77** | 0.54 | **0.74** | **0.69**|
+|ARD ✔ N ✖ Cat.✖ Per. ✔ |**0.69** | **0.77** | **0.53** | **0.74** | 0.68|
+|RF                        |0.64 | 0.69 | 0.66 | 0.74 | 0.68|
+|IDW                     |0.19 | 0.20 | -0.10 | 0.02 | 0.08|
+|KNN                     |0.62 | 0.73 | 0.61 | 0.74 | 0.68|
+|XGB                     |0.60 | 0.70 | 0.65 | 0.67 | 0.66|
+|ADAIN	                  |      |      |      |      |      |
+
+</details>
+
+
+
+
+
+
+
+
+
+
