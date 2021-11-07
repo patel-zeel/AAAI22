@@ -33,7 +33,7 @@ A:
 
 |Old figure| New Figure|
 |:-:|:-:|
-|![]()   | ![]()|
+|![](https://raw.githubusercontent.com/ouranonymoussubmission/AAAI22/main/figures/comp_1014.pdf)   | ![]()|
 
 
 
