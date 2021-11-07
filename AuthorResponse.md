@@ -38,7 +38,7 @@ We totally agree with the comment and thus, we run our models on London Air Qual
 
 * We have provided the results with an extended set of metrics on [Beijing dataset](https://github.com/ouranonymoussubmission/AAAI22/blob/main/AuthorResponse.md#evaluation-of-models-on-beijing-dataset-with-an-extended-set-of-metrics) and [London dataset](https://github.com/ouranonymoussubmission/AAAI22/blob/main/AuthorResponse.md#results). We also explain the probabilistic metrics briefly [here](https://github.com/ouranonymoussubmission/AAAI22/blob/main/AuthorResponse.md#probabilistic-metrics).
 
-### R2Q4
+### R1Q4
 **Q: The overall description of the kernels is sometimes hard to follow (I believe for instance that length scale in Section 4.2 is not clearly defined, Section 4.3 is a bit sketchy). Maybe after Section 4.6 the authors could also write explicitly the final proposed model ?**
 
 * We agree with this comment and we have revised the confusing notations in the manucript. We have also added a notation table in [extended appendix](https://github.com/ouranonymoussubmission/AAAI22/blob/main/Appendix_v2.pdf). A snapshot of which is given below.
