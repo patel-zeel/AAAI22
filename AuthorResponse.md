@@ -1,4 +1,4 @@
-# Extended Feedback
+# Extended Author Response
 
 Click on any of the links below to naviagate to corresponding sections.
 
@@ -23,6 +23,9 @@ Q: In the data preprocessing the authors highlight the fact that many stations h
 data filling. Obviously dealing with missing data is required for real-life datasets, but could it be possible to highlight the performance of the proposed method with an additional dataset which does not require to fill so many data (to provide additional guarantees that the preprocessing did not impact the results) ?
 
 A: We totally agree with the comment and thus, we run our models on London Air Quality dataset given in [KDD Cup 2018](https://www.kdd.org/kdd2018/kdd-cup). We found that our model still outperforms all the baselines with multiple metrics. Click [here](https://github.com/ouranonymoussubmission/AAAI22/blob/main/Rebuttal.md#london-data-experiment) to navigate to the further details/results.
+
+
+---
 
 ### London Data Experiment
 #### Preprocessing
@@ -71,9 +74,9 @@ We perform 4-fold cross-validation by splitting the train and test sets based on
 |ARD ✔ N ✖ Cat.✖ Per. ✔	 | 2.88 | 2.76 | 3.98 | 3.19 | 3.20 |
 |RF	                     | 2.88 | 2.76 | 3.98 | 3.19 | 3.20 |
 |IDW	                     | 2.88 | 2.76 | 3.98 | 3.19 | 3.20 |
-|KNN	                     | 4.92 | 4.65 | 6.77 | 5.66 | 5.50 |
-|XGB	                     | 3.25 | 3.16 | **3.25** | **3.15** | 3.20 |
-|ADAIN	                  | 3.52 | 3.31 | 3.32 | 3.62 | 3.44 |
+|KNN	                     | 3.25 | 3.16 | **3.25** | **3.15** | 3.20 |
+|XGB	                     | 3.52 | 3.31 | 3.32 | 3.62 | 3.44 |
+|ADAIN	                  |      |      |      |      |      |
 
 </details>
 
