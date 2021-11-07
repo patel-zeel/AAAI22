@@ -48,7 +48,7 @@ We perform 4-fold cross-validation by splitting the train and test sets based on
 #### Results
 
 <details open>
-<summary>Root Mean Squared Error</summary>
+<summary>Root Mean Squared Error (lower is better)</summary>
 
 | Model | Fold-0 | Fold-1 | Fold-2 | Fold-3 | Mean |
 | :- | -:| -:| -:| -:| -:|
@@ -65,7 +65,7 @@ We perform 4-fold cross-validation by splitting the train and test sets based on
 </details>
 
 <details>
-<summary>Mean Absolute Error</summary>
+<summary>Mean Absolute Error (lower is better)</summary>
 
 | Model | Fold-0 | Fold-1 | Fold-2 | Fold-3 | Mean |
 | :- | -:| -:| -:| -:| -:|
@@ -81,7 +81,7 @@ We perform 4-fold cross-validation by splitting the train and test sets based on
 </details>
 
 <details>
-<summary>Mean Absolute Percentage Error</summary>
+<summary>Mean Absolute Percentage Error (lower is better)</summary>
 
 | Model | Fold-0 | Fold-1 | Fold-2 | Fold-3 | Mean |
 | :- | -:| -:| -:| -:| -:|
@@ -97,7 +97,7 @@ We perform 4-fold cross-validation by splitting the train and test sets based on
 </details>
 
 <details>
-<summary>R^2 Score</summary>
+<summary>R^2 Score (higher is better)</summary>
 
 | Model | Fold-0 | Fold-1 | Fold-2 | Fold-3 | Mean |
 | :- | -:| -:| -:| -:| -:|
@@ -112,8 +112,81 @@ We perform 4-fold cross-validation by splitting the train and test sets based on
 
 </details>
 
+<details>
+<summary>Negative Log Predictive Density (lower is better)</summary>
 
+| Model | Fold-0 | Fold-1 | Fold-2 | Fold-3 | Mean |
+| :- | -:| -:| -:| -:| -:|
+|ARD ✖ N ✖ Cat.✖ Per. ✖ |**12,905.88** | 11,909.78 | 10,528.24 | 10,347.43| 11,422.83 |
+|ARD ✔ N ✖ Cat.✖ Per. ✖ |13,046.91 | 11,691.14 | **10,261.17** | 9,994.86| **11,248.52** |
+|ARD ✔ N ✖ Cat.✖ Per. ✔ |13,226.03 | **11,659.61** | 10,284.22 | **9,926.65**| 11,274.13 |
+|RF                        |- | - | - | -|
+|IDW                     |- | - | - | -|
+|KNN                     |- | - | - | -|
+|XGB                     |- | - | - | -|
+|ADAIN	                 |- | - | - | -|
 
+</details>
+
+<details>
+<summary>Mean Standardized Log Loss (lower is better)</summary>
+
+| Model | Fold-0 | Fold-1 | Fold-2 | Fold-3 | Mean |
+| :- | -:| -:| -:| -:| -:|
+|ARD ✖ N ✖ Cat.✖ Per. ✖ |3.25 | 2.92 | **3.39** | 3.04 | 3.15|
+|ARD ✔ N ✖ Cat.✖ Per. ✖ |**3.21** | **2.83** | 3.42 | 2.94 | **3.10**|
+|ARD ✔ N ✖ Cat.✖ Per. ✔ |3.28 | 2.84 | 3.42 | **2.93** | 3.12|
+|RF                        |- | - | - | -|
+|IDW                     |- | - | - | -|
+|KNN                     |- | - | - | -|
+|XGB                     |- | - | - | -|
+|ADAIN                     |- | - | - | -|
+</details>
+
+<details>
+<summary>Coverage Error (68% or 1 standard deviation) (lower is better)</summary>
+
+| Model | Fold-0 | Fold-1 | Fold-2 | Fold-3 | Mean |
+| :- | -:| -:| -:| -:| -:|
+|ARD ✖ N ✖ Cat.✖ Per. ✖ |0.02 | 0.02 | 0.10 | 0.12 | 0.07|
+|ARD ✔ N ✖ Cat.✖ Per. ✖ |0.03 | 0.03 | 0.11 | 0.10 | 0.07|
+|ARD ✔ N ✖ Cat.✖ Per. ✔ |**0.01** | **0.02** | **0.10** | **0.10** | **0.06**|
+|RF                        |- | - | - | -|
+|IDW                     |- | - | - | -|
+|KNN                     |- | - | - | -|
+|XGB                     |- | - | - | -|
+|ADAIN                     |- | - | - | -|
+</details>
+
+<details>
+<summary>Coverage Error (95% or 2 standard deviation) (lower is better)</summary>
+
+| Model | Fold-0 | Fold-1 | Fold-2 | Fold-3 | Mean |
+| :- | -:| -:| -:| -:| -:|
+|ARD ✖ N ✖ Cat.✖ Per. ✖ |0.04 | 0.03 | 0.09 | 0.09 | 0.06|
+|ARD ✔ N ✖ Cat.✖ Per. ✖ |0.04 | 0.03 | 0.12 | 0.07 | 0.06|
+|ARD ✔ N ✖ Cat.✖ Per. ✔ |0.05 | 0.03 | 0.12 | 0.07 | 0.07|
+|RF                        |- | - | - | -|
+|IDW                     |- | - | - | -|
+|KNN                     |- | - | - | -|
+|XGB                     |- | - | - | -|
+|ADAIN                     |- | - | - | -|
+</details>
+
+<details>
+<summary>Coverage Error (99% or 3 standard deviation) (lower is better)</summary>
+
+| Model | Fold-0 | Fold-1 | Fold-2 | Fold-3 | Mean |
+| :- | -:| -:| -:| -:| -:|
+|ARD ✖ N ✖ Cat.✖ Per. ✖ |0.04 | 0.02 | 0.06 | 0.03 | 0.04|
+|ARD ✔ N ✖ Cat.✖ Per. ✖ |0.03 | 0.02 | 0.06 | 0.02 | 0.03|
+|ARD ✔ N ✖ Cat.✖ Per. ✔ |0.03 | 0.02 | 0.05 | 0.02 | 0.03|
+|RF                        |- | - | - | -|
+|IDW                     |- | - | - | -|
+|KNN                     |- | - | - | -|
+|XGB                     |- | - | - | -|
+|ADAIN                     |- | - | - | -|
+</details>
 
 
 
