@@ -56,10 +56,19 @@ We totally agree with the comment and thus, we run our models on London Air Qual
 - **The paper misuses bold, non-bold, uppercase, and lowercase symbols without explicit definition. For example, what is the difference between \mathbf{x}_i and x_i. What does f(X) mean in Fig. 2?**
 **A possible solution: adding a table to clarify all the used notations to increase the readability.**
 
-* We have updated the notations and corresponding figure as the following:
+* We have updated the notations in [extended appendix](https://github.com/ouranonymoussubmission/AAAI22/blob/main/Appendix_v2.pdf) as shown [here](https://github.com/ouranonymoussubmission/AAAI22/blob/main/AuthorResponse.md#r1q4)
+* We have updated corresponding figure as the following:
+
 |Old figure| Updated Figure|
 |:-:|:-:|
-|![image](https://user-images.githubusercontent.com/72247818/140643133-69a51889-6096-4556-9ab6-c60723bb7178.png)| ![image](https://user-images.githubusercontent.com/72247818/140643112-571ad0dc-7955-48ce-ac0c-b2aedf4b7cfe.png)|
+|![image](https://user-images.githubusercontent.com/72247818/140643198-256663c7-dbb4-4e17-9138-f576259780ce.png)| ![image](https://user-images.githubusercontent.com/72247818/140643188-c4242b67-cb42-40ec-ad3d-7957d408afd7.png)|
+
+* We have updated Figure 2 as the following:
+
+|Old figure| Updated Figure|
+|:-:|:-:|
+|![image](https://user-images.githubusercontent.com/72247818/140643311-1583b85d-d20a-4fa8-b200-11294d35affa.png)| ![image](https://user-images.githubusercontent.com/72247818/140643325-2b161bb8-f177-4c24-98a6-94ccd0b537de.png)|
+
 
 ### Probabilistic metrics
 
