@@ -1,6 +1,6 @@
 # Extended Feedback
 
-Click on any of the links below to naviagate to a specific question.
+Click on any of the links below to naviagate to corresponding sections.
 
 * [Reviewer 1](https://github.com/ouranonymoussubmission/AAAI22/blob/main/Rebuttal.md#r1)
     * [Q1: Constant Noise](https://github.com/ouranonymoussubmission/AAAI22/blob/main/Rebuttal.md#r1q1)
@@ -24,5 +24,56 @@ data filling. Obviously dealing with missing data is required for real-life data
 
 A: We totally agree with the comment and thus, we run our models on London Air Quality dataset given in [KDD Cup 2018](https://www.kdd.org/kdd2018/kdd-cup). We found that our model still outperforms all the baselines with multiple metrics. Click [here](https://github.com/ouranonymoussubmission/AAAI22/blob/main/Rebuttal.md#london-data-experiment) to navigate to the further details/results.
 
-
 ### London Data Experiment
+#### Preprocessing
+In KDD Cup 2018 challenge, London air quality dataset (PM2.5, Latitude and Longitude) is provided along with the grid-wise meteorological data of the London city. To map the meteorological data (Temperature, Pressure, Humidity, Wind direction and Wind speed) with each air quality station, we take a distance-based weighted average (closer the station, higher the weight) of the nearest 4 grid points to the station. 
+
+In our experiments, we choose a month with the least amount of \% missing entries of the AQ variable (PM2.5) (May 2017 consists of 10.8\% missing PM2.5 entries). Note that there are no missing entries in meteorological features. Further, to address the missing entries in the 'May' London air quality dataset, we investigate the stations having a substantial amount of missing values. 2 of the 24 stations ('HR1', 'KF1') from the dataset are having 85\% of the missing PM2.5 values, and thus we remove those stations. After this step, only 1.5% entries are missing in the dataset. To fill in the missing data, we use similar method to the Beijing dataset. Also, unlike Beijing, the London AQ dataset consists only of non-categorical features, thus excluding the (ANCL) configurations with categorical kernel.
+
+#### Experimental Setup
+We perform 4-fold cross-validation by splitting the train and test sets based on stations. 
+
+#### Experimental Configuration
+
+| Configuration | ✖ | ✔ |
+| :-: | :-: | :-: |
+| ARD | ARD disabled | ARD enabled |
+| N | Stationary kernel | Non-stationary kernel |
+| Cat. | Using RBF/Matern kernel for categorical features | Using Hamming distance kernel for categorical features |
+| Per. | Using RBF/Matern kernel for the time feature | Using Local Periodic kernel for the time feature |
+
+#### Results
+
+<details open>
+<summary>Root Mean Squared Error</summary>
+
+| Model | Fold-0 | Fold-1 | Fold-2 | Fold-3 | Mean |
+| :- | -:| -:| -:| -:| -:|
+|ARD ✖ N ✖ Cat.✖ Per. ✖	| 5.06 | 4.32 | 5.61	| 4.45 | 4.86 |
+|ARD ✔ N ✖ Cat.✖ Per. ✖	| **4.82** | 3.99 | 5.57	| 4.18 | **4.64** |
+|ARD ✔ N ✖ Cat.✖ Per. ✔	| 4.83 | **3.99** | 5.60	| **4.16** | 4.65 |
+|RF	                    | 5.16 | 4.64 | **4.78** | 4.17 | 4.69 |
+|IDW	                    | 7.79 | 7.48 | 8.61 | 8.15 | 8.01 |
+|KNN	                    | 5.32 | 4.38 | 5.10 | 4.18 | 4.75 |
+|XGB	                    | 5.50 | 4.57 | 4.84 | 4.70 | 4.90 |
+|ADAIN	                 | 5.26 | 4.41 | 4.95 | 4.51 | 4.78 |
+
+   
+</details>
+
+<details>
+<summary>Mean Absolute Error</summary>
+
+| Model | Fold-0 | Fold-1 | Fold-2 | Fold-3 | Mean |
+| :- | -:| -:| -:| -:| -:|
+|ARD ✖ N ✖ Cat.✖ Per. ✖	 | 3.07 | 2.93 | 3.92 | 3.38 | 3.33 |
+|ARD ✔ N ✖ Cat.✖ Per. ✖	 | **2.87** | **2.76** | 3.92 | 3.19 | **3.19** |
+|ARD ✔ N ✖ Cat.✖ Per. ✔	 | 2.88 | 2.76 | 3.98 | 3.19 | 3.20 |
+|RF	                     | 2.88 | 2.76 | 3.98 | 3.19 | 3.20 |
+|IDW	                     | 2.88 | 2.76 | 3.98 | 3.19 | 3.20 |
+|KNN	                     | 4.92 | 4.65 | 6.77 | 5.66 | 5.50 |
+|XGB	                     | 3.25 | 3.16 | **3.25** | **3.15** | 3.20 |
+|ADAIN	                  | 3.52 | 3.31 | 3.32 | 3.62 | 3.44 |
+
+</details>
+
