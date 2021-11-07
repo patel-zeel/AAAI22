@@ -3,10 +3,6 @@
 Click on any of the links below to naviagate to corresponding sections.
 
 * [Reviewer 1](https://github.com/ouranonymoussubmission/AAAI22/blob/main/AuthorResponse.md#r1)
-    * [Q1: Constant Noise](https://github.com/ouranonymoussubmission/AAAI22/blob/main/AuthorResponse.md#r1q1)
-    * [Q2: Experiment on Non-missing Data](https://github.com/ouranonymoussubmission/AAAI22/blob/main/AuthorResponse.md#r1q2)
-    * [Q3: Uncertainty Quantification](https://github.com/ouranonymoussubmission/AAAI22/blob/main/AuthorResponse.md#r1q3)
-    * [Q4: Clarity Needed in Section 4.2, 4.3 and Final Model](https://github.com/ouranonymoussubmission/AAAI22/blob/main/AuthorResponse.md#r1q4)
 * [Reviewer 2](https://github.com/ouranonymoussubmission/AAAI22/blob/main/AuthorResponse.md#r2)
 * [Reviewer 3](https://github.com/ouranonymoussubmission/AAAI22/blob/main/AuthorResponse.md#r3)
 * [Reviewer 4](https://github.com/ouranonymoussubmission/AAAI22/blob/main/AuthorResponse.md#r4)
@@ -102,7 +98,24 @@ We have provided the results with an extended set of metrics on [Beijing dataset
 ### R2Q7
 **Q: Some important baselines/related works are missing. As far as I know, there are some papers published at top venues also focusing on the spatio-temporal imputation problem. These studies can definitely be applied to the air quality inference task, such as Kriging Convolutional Networks (KCN), Inductive Graph Neural Networks for Spatiotemporal Kriging (IGNNK), and GP-based methods like SGPRN (Scalable Gaussian Process Regression Networks). To improve its significance, comparing the proposed model with them is needed.**
 
-We have compared our model with the suggested KCN (kcn\_sage) baseline on the Beijing dataset. With a non-exhaustive but sufficient hyperparameter tuning, we found that KCN achieves train and test RMSE of $25$ and $45$ compared to $10$ and $25$ for our models. We have also tried to run Scalable Gaussian Process Regression Networks (SGPRN) on our dataset, but it does not scale for our dataset size. Scalability in SGPRN corresponds to dimensions of multi-output observations. Also, we find that authors have tested their code on 450 datapoints compared to $>14K$ datapoints in our case. Given these concerns with suggested baselines, we do not yet compare with them in the main table but will consult the respective authors to understand these better and potentially include comparisons in the camera-ready.
+We have compared our model with the suggested KCN (kcn_sage) baseline on the Beijing dataset. With a non-exhaustive but sufficient hyperparameter tuning, we found that KCN achieves train and test RMSE of 25 and 45 compared to 10 and 25 for our models. We have also tried to run Scalable Gaussian Process Regression Networks (SGPRN) on our dataset, but it does not scale for our dataset size. Scalability in SGPRN corresponds to dimensions of multi-output observations. Also, we find that authors have tested their code on 450 datapoints compared to >14K datapoints in our case. Given these concerns with suggested baselines, we do not yet compare with them in the main table but will consult the respective authors to understand these better and potentially include comparisons in the camera-ready.
+
+## R3
+### R3Q1
+**Q: Can you provide an intuition to the non stationary model under-performing?**
+
+Using probabilistic metrics, we found that non-stationary models perform betterthan the stationary models on Beijing and London datasets. In the future, we plan to selectively add non-stationarity tobalance between flexibility and model performance.
+ 
+### R3Q2
+**Q: Would other applications benefit from your approach? if so which part?**
+
+Our model can be used as a generic regression model but is especially suited for non-stationary environmental phenomena like rainfall, temperature, etc. We highlight a way to handle categorical features in a GP model and leverage batch training which is a recent advancement in GP based methods overcoming a significant hurdle (O(n^3) time-complexity) in using GPs for practical purposes.
+
+## R4
+### R4Q1
+**Q: How would you address some of the data requirements mentioned in the paper?**
+
+To extend our experiments to larger datasets, we can either omit the baselines requiring contiguous datasets or fill the missing data accurately. We are investigating time-series models to interpolate the missing data accurately. As such, our proposed techniques are general and can be applied immediately to various cities having air quality monitoring.
 
 ### Probabilistic metrics
 
