@@ -74,7 +74,7 @@ A predictive distribution is called well-calibrated if x% of samples lie within 
 | :- | -:| -:| -:| -:|
 |ARD ✖ N ✖ Cat.✖ Per. ✖ |37.25 | 39.86 | 36.73 | 37.95|
 |ARD ✔ N ✖ Cat.✖ Per. ✖ |23.63 | 25.52 | 25.97 | 25.04|
-|ARD ✔ N ✖ Cat.✔ Per. ✔ |22.24 | 24.74 | 25.1 | 24.03|
+|ARD ✔ N ✖ Cat.✔ Per. ✖ |22.24 | 24.74 | 25.1 | 24.03|
 |ARD ✔ N ✖ Cat.✔ Per. ✔ |22.6 | 24.96 | 25.27 | 24.28|
 |RF                        |24.86 | 29.78 | 25.4 | 26.68|
 |IDW                     |49.11 | 50 | 45.18 | 48.1|
@@ -92,7 +92,7 @@ A predictive distribution is called well-calibrated if x% of samples lie within 
 | :- | -:| -:| -:| -:|
 |ARD ✖ N ✖ Cat.✖ Per. ✖ |25.85 | 29.51 | 24.61 | 26.66|
 |ARD ✔ N ✖ Cat.✖ Per. ✖ |14.28 | 18.26 | 14.88 | 15.81|
-|ARD ✔ N ✖ Cat.✔ Per. ✔ |13.06 | 17.35 | 14.69 | 15.03|
+|ARD ✔ N ✖ Cat.✔ Per. ✖ |13.06 | 17.35 | 14.69 | 15.03|
 |ARD ✔ N ✖ Cat.✔ Per. ✔ |13.37 | 17.48 | 14.85 | 15.23|
 |RF                        |14.16 | 17.96 | 14.64 | 15.59|
 |IDW                     |34.79 | 38.35 | 31.24 | 34.79|
@@ -109,7 +109,7 @@ A predictive distribution is called well-calibrated if x% of samples lie within 
 | :- | -:| -:| -:| -:|
 |ARD ✖ N ✖ Cat.✖ Per. ✖ |0.68 | 1.18 | 0.64 | 0.83|
 |ARD ✔ N ✖ Cat.✖ Per. ✖ |0.3 | 0.71 | 0.31 | 0.44|
-|ARD ✔ N ✖ Cat.✔ Per. ✔ |0.27 | 0.69 | 0.3 | 0.42|
+|ARD ✔ N ✖ Cat.✔ Per. ✖ |0.27 | 0.69 | 0.3 | 0.42|
 |ARD ✔ N ✖ Cat.✔ Per. ✔ |0.28 | 0.69 | 0.31 | 0.43|
 |RF                        |0.29 | 0.48 | 0.3 | 0.36|
 |IDW                     |1.04 | 1.73 | 1.07 | 1.28|
@@ -126,7 +126,7 @@ A predictive distribution is called well-calibrated if x% of samples lie within 
 | :- | -:| -:| -:| -:|
 |ARD ✖ N ✖ Cat.✖ Per. ✖ |0.77 | 0.69 | 0.77 | 0.74|
 |ARD ✔ N ✖ Cat.✖ Per. ✖ |0.91 | 0.87 | 0.89 | 0.89|
-|ARD ✔ N ✖ Cat.✔ Per. ✔ |0.92 | 0.88 | 0.89 | 0.9|
+|ARD ✔ N ✖ Cat.✔ Per. ✖ |0.92 | 0.88 | 0.89 | 0.9|
 |ARD ✔ N ✖ Cat.✔ Per. ✔ |0.91 | 0.88 | 0.89 | 0.89|
 |RF                        |0.9 | 0.83 | 0.89 | 0.87|
 |IDW                     |0.6 | 0.51 | 0.65 | 0.59|
@@ -143,7 +143,7 @@ A predictive distribution is called well-calibrated if x% of samples lie within 
 | :- | -:| -:| -:| -:|
 |ARD ✖ N ✖ Cat.✖ Per. ✖ |363,785.63 | 355,416.47 | 336,014.44 | 351,738.84|
 |ARD ✔ N ✖ Cat.✖ Per. ✖ |166,680.38 | 176,821.81 | 167,478.70 | 170,326.96|
-|ARD ✔ N ✖ Cat.✔ Per. ✔ |149,838.16 | 155,413.97 | 157,293.14 | 154,181.76|
+|ARD ✔ N ✖ Cat.✔ Per. ✖ |149,838.16 | 155,413.97 | 157,293.14 | 154,181.76|
 |ARD ✔ N ✖ Cat.✔ Per. ✔ |134,164.84 | 140,730.25 | 138,787.03 | 137,894.04|
 |RF                        |- | - | - | -|
 |IDW                     |- | - | - | -|
@@ -160,7 +160,7 @@ A predictive distribution is called well-calibrated if x% of samples lie within 
 | :- | -:| -:| -:| -:|
 |ARD ✖ N ✖ Cat.✖ Per. ✖ |47.89 | 52.77 | 46.45 | 49.04|
 |ARD ✔ N ✖ Cat.✖ Per. ✖ |26.64 | 31.47 | 30.08 | 29.40|
-|ARD ✔ N ✖ Cat.✔ Per. ✔ |24.58 | 28.75 | 30.27 | 27.87|
+|ARD ✔ N ✖ Cat.✔ Per. ✖ |24.58 | 28.75 | 30.27 | 27.87|
 |ARD ✔ N ✖ Cat.✔ Per. ✔ |21.96 | 25.84 | 26.26 | 24.69|
 |RF                        |- | - | - | -|
 |IDW                     |- | - | - | -|
@@ -176,7 +176,7 @@ A predictive distribution is called well-calibrated if x% of samples lie within 
 | :- | -:| -:| -:| -:|
 |ARD ✖ N ✖ Cat.✖ Per. ✖ |0.57 | 0.59 | 0.55 | 0.57|
 |ARD ✔ N ✖ Cat.✖ Per. ✖ |0.46 | 0.53 | 0.45 | 0.48|
-|ARD ✔ N ✖ Cat.✔ Per. ✔ |0.45 | 0.52 | 0.45 | 0.47|
+|ARD ✔ N ✖ Cat.✔ Per. ✖ |0.45 | 0.52 | 0.45 | 0.47|
 |ARD ✔ N ✖ Cat.✔ Per. ✔ |0.43 | 0.51 | 0.44 | 0.46|
 |RF                        |- | - | - | -|
 |IDW                     |- | - | - | -|
@@ -193,7 +193,7 @@ A predictive distribution is called well-calibrated if x% of samples lie within 
 | :- | -:| -:| -:| -:|
 |ARD ✖ N ✖ Cat.✖ Per. ✖ |0.73 | 0.77 | 0.69 | 0.73|
 |ARD ✔ N ✖ Cat.✖ Per. ✖ |0.54 | 0.67 | 0.54 | 0.58|
-|ARD ✔ N ✖ Cat.✔ Per. ✔ |0.51 | 0.65 | 0.53 | 0.57|
+|ARD ✔ N ✖ Cat.✔ Per. ✖ |0.51 | 0.65 | 0.53 | 0.57|
 |ARD ✔ N ✖ Cat.✔ Per. ✔ |0.50 | 0.64 | 0.51 | 0.55|
 |RF                        |- | - | - | -|
 |IDW                     |- | - | - | -|
@@ -209,7 +209,7 @@ A predictive distribution is called well-calibrated if x% of samples lie within 
 | :- | -:| -:| -:| -:|
 |ARD ✖ N ✖ Cat.✖ Per. ✖ |0.66 | 0.73 | 0.62 | 0.67|
 |ARD ✔ N ✖ Cat.✖ Per. ✖ |0.45 | 0.59 | 0.45 | 0.49|
-|ARD ✔ N ✖ Cat.✔ Per. ✔ |0.42 | 0.57 | 0.45 | 0.48|
+|ARD ✔ N ✖ Cat.✔ Per. ✖ |0.42 | 0.57 | 0.45 | 0.48|
 |ARD ✔ N ✖ Cat.✔ Per. ✔ |0.40 | 0.55 | 0.42 | 0.46|
 |RF                        |- | - | - | -|
 |IDW                     |- | - | - | -|
