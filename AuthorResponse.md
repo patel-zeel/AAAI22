@@ -36,12 +36,166 @@ We totally agree with the comment and thus, we run our models on London Air Qual
 
 
 
-* We have provided the results with an extended set of metrics on [Beijing dataset](https://github.com/ouranonymoussubmission/AAAI22/blob/main/AuthorResponse.md#evaluation-of-models-on-beijing-dataset-with-an-extended-set-of-metrics) and [London dataset](https://github.com/ouranonymoussubmission/AAAI22/blob/main/AuthorResponse.md#results).
+* We have provided the results with an extended set of metrics on [Beijing dataset](https://github.com/ouranonymoussubmission/AAAI22/blob/main/AuthorResponse.md#evaluation-of-models-on-beijing-dataset-with-an-extended-set-of-metrics) and [London dataset](https://github.com/ouranonymoussubmission/AAAI22/blob/main/AuthorResponse.md#results). We also explain the probabilistic metrics briefly [here](https://github.com/ouranonymoussubmission/AAAI22/blob/main/AuthorResponse.md#probabilistic-metrics).
 
 ---
 
+### Probabilistic metrics
+
+* Negative Log Predictive Density (NLPD)
+
+Log Predictive Density (LPD) is a log probability of sampling the test data given the posterior predictive distribution (higher is better). Negative of LPD is generally known as NLPD metric (lower is better). A set of work uses NLPD as a metric to evaluate probabilistic models [[LLS GP](https://link.springer.com/chapter/10.1007/978-3-540-87481-2_14), [KCN](https://ojs.aaai.org/index.php/AAAI/article/view/5716), [ICML21](https://arxiv.org/pdf/2102.08314.pdf)].
+
+* Mean Standardized Log Loss (MSLL)
+
+Standardized Log Loss (LL) is log probability of sampling a test data point given univariate normal distribution with mean as predictive mean and variance as predictive variance for the data point. An average of this metric over all the data points is called as Mean Standardized Log Loss (MSLL).
+
+* [CE (Coverage Error)](https://arxiv.org/pdf/1710.01720v1.pdf)
+
+A predictive distribution is called well-calibrated if x% of samples lie within x% confidence interval. For example, 95% of the test samples should lie within 95% confidence interval. Coverage error for x% confidence interval is an absolute difference between (x/100) and fraction of samples falling within x% confidence interval. For more details, please visit the reference.
+
 ### Evaluation of Models on Beijing Dataset with an extended set of metrics
 
+<details open>
+<summary>Root Mean Squared Error (lower is better)</summary>
+
+| Model | Fold-0 | Fold-1 | Fold-2 | Fold-3 | Mean |
+| :- | -:| -:| -:| -:| -:|
+|ARD ✖ N ✖ Cat.✖ Per. ✖	| 5.06 | 4.32 | 5.61	| 4.45 | 4.86 |
+|ARD ✔ N ✖ Cat.✖ Per. ✖	| **4.82** | 3.99 | 5.57	| 4.18 | **4.64** |
+|ARD ✔ N ✖ Cat.✖ Per. ✔	| 4.83 | **3.99** | 5.60	| **4.16** | 4.65 |
+|RF	                    | 5.16 | 4.64 | **4.78** | 4.17 | 4.69 |
+|IDW	                    | 7.79 | 7.48 | 8.61 | 8.15 | 8.01 |
+|KNN	                    | 5.32 | 4.38 | 5.10 | 4.18 | 4.75 |
+|XGB	                    | 5.50 | 4.57 | 4.84 | 4.70 | 4.90 |
+|ADAIN	                 | 5.26 | 4.41 | 4.95 | 4.51 | 4.78 |
+
+   
+</details>
+
+<details>
+<summary>Mean Absolute Error (lower is better)</summary>
+
+| Model | Fold-0 | Fold-1 | Fold-2 | Fold-3 | Mean |
+| :- | -:| -:| -:| -:| -:|
+|ARD ✖ N ✖ Cat.✖ Per. ✖	 | 3.07 | 2.93 | 3.92 | 3.38 | 3.33 |
+|ARD ✔ N ✖ Cat.✖ Per. ✖	 | **2.87** | **2.76** | 3.92 | 3.19 | **3.19** |
+|ARD ✔ N ✖ Cat.✖ Per. ✔	 | 2.88 | 2.76 | 3.98 | 3.19 | 3.20 |
+|RF	                     | 2.88 | 2.76 | 3.98 | 3.19 | 3.20 |
+|IDW	                     | 2.88 | 2.76 | 3.98 | 3.19 | 3.20 |
+|KNN	                     | 3.25 | 3.16 | **3.25** | **3.15** | 3.20 |
+|XGB	                     | 3.52 | 3.31 | 3.32 | 3.62 | 3.44 |
+|ADAIN	                  |      |      |      |      |      |
+
+</details>
+
+<details>
+<summary>Mean Absolute Percentage Error (lower is better)</summary>
+
+| Model | Fold-0 | Fold-1 | Fold-2 | Fold-3 | Mean |
+| :- | -:| -:| -:| -:| -:|
+|ARD ✖ N ✖ Cat.✖ Per. ✖	 |34% |29% | 87% |38% |47% |
+|ARD ✔ N ✖ Cat.✖ Per. ✖	 | 32% |27% |88% |35% |46% |
+|ARD ✔ N ✖ Cat.✖ Per. ✔	 | **32%** | **27%** |89% |**35%** |46% |
+|RF	                     |32% |30% |**71%** |36% |**42%**|
+|IDW	                     |51% |46% |131% |57% |71% |
+|KNN	                     |32% |31% |78% |35% |44% |
+|XGB	                     |40% |35% |78% |40% |48% |
+|ADAIN	                  |      |      |      |      |      |
+
+</details>
+
+<details>
+<summary>R^2 Score (higher is better)</summary>
+
+| Model | Fold-0 | Fold-1 | Fold-2 | Fold-3 | Mean |
+| :- | -:| -:| -:| -:| -:|
+|ARD ✖ N ✖ Cat.✖ Per. ✖ |0.66 | 0.73 | 0.53 | 0.71 | 0.66|
+|ARD ✔ N ✖ Cat.✖ Per. ✖ |**0.69** | **0.77** | 0.54 | **0.74** | **0.69**|
+|ARD ✔ N ✖ Cat.✖ Per. ✔ |**0.69** | **0.77** | **0.53** | **0.74** | 0.68|
+|RF                        |0.64 | 0.69 | 0.66 | 0.74 | 0.68|
+|IDW                     |0.19 | 0.20 | -0.10 | 0.02 | 0.08|
+|KNN                     |0.62 | 0.73 | 0.61 | 0.74 | 0.68|
+|XGB                     |0.60 | 0.70 | 0.65 | 0.67 | 0.66|
+|ADAIN	                  |      |      |      |      |      |
+
+</details>
+
+<details>
+<summary>Negative Log Predictive Density (lower is better)</summary>
+
+| Model | Fold-0 | Fold-1 | Fold-2 | Fold-3 | Mean |
+| :- | -:| -:| -:| -:| -:|
+|ARD ✖ N ✖ Cat.✖ Per. ✖ |**12,905.88** | 11,909.78 | 10,528.24 | 10,347.43| 11,422.83 |
+|ARD ✔ N ✖ Cat.✖ Per. ✖ |13,046.91 | 11,691.14 | **10,261.17** | 9,994.86| **11,248.52** |
+|ARD ✔ N ✖ Cat.✖ Per. ✔ |13,226.03 | **11,659.61** | 10,284.22 | **9,926.65**| 11,274.13 |
+|RF                        |- | - | - | -|
+|IDW                     |- | - | - | -|
+|KNN                     |- | - | - | -|
+|XGB                     |- | - | - | -|
+|ADAIN	                 |- | - | - | -|
+
+</details>
+
+<details>
+<summary>Mean Standardized Log Loss (lower is better)</summary>
+
+| Model | Fold-0 | Fold-1 | Fold-2 | Fold-3 | Mean |
+| :- | -:| -:| -:| -:| -:|
+|ARD ✖ N ✖ Cat.✖ Per. ✖ |3.25 | 2.92 | **3.39** | 3.04 | 3.15|
+|ARD ✔ N ✖ Cat.✖ Per. ✖ |**3.21** | **2.83** | 3.42 | 2.94 | **3.10**|
+|ARD ✔ N ✖ Cat.✖ Per. ✔ |3.28 | 2.84 | 3.42 | **2.93** | 3.12|
+|RF                        |- | - | - | -|
+|IDW                     |- | - | - | -|
+|KNN                     |- | - | - | -|
+|XGB                     |- | - | - | -|
+|ADAIN                     |- | - | - | -|
+</details>
+
+<details>
+<summary>Coverage Error (68% or 1 standard deviation) (lower is better)</summary>
+
+| Model | Fold-0 | Fold-1 | Fold-2 | Fold-3 | Mean |
+| :- | -:| -:| -:| -:| -:|
+|ARD ✖ N ✖ Cat.✖ Per. ✖ |0.02 | 0.02 | 0.10 | 0.12 | 0.07|
+|ARD ✔ N ✖ Cat.✖ Per. ✖ |0.03 | 0.03 | 0.11 | 0.10 | 0.07|
+|ARD ✔ N ✖ Cat.✖ Per. ✔ |**0.01** | **0.02** | **0.10** | **0.10** | **0.06**|
+|RF                        |- | - | - | -|
+|IDW                     |- | - | - | -|
+|KNN                     |- | - | - | -|
+|XGB                     |- | - | - | -|
+|ADAIN                     |- | - | - | -|
+</details>
+
+<details>
+<summary>Coverage Error (95% or 2 standard deviation) (lower is better)</summary>
+
+| Model | Fold-0 | Fold-1 | Fold-2 | Fold-3 | Mean |
+| :- | -:| -:| -:| -:| -:|
+|ARD ✖ N ✖ Cat.✖ Per. ✖ |0.04 | 0.03 | 0.09 | 0.09 | 0.06|
+|ARD ✔ N ✖ Cat.✖ Per. ✖ |0.04 | 0.03 | 0.12 | 0.07 | 0.06|
+|ARD ✔ N ✖ Cat.✖ Per. ✔ |0.05 | 0.03 | 0.12 | 0.07 | 0.07|
+|RF                        |- | - | - | -|
+|IDW                     |- | - | - | -|
+|KNN                     |- | - | - | -|
+|XGB                     |- | - | - | -|
+|ADAIN                     |- | - | - | -|
+</details>
+
+<details>
+<summary>Coverage Error (99% or 3 standard deviation) (lower is better)</summary>
+
+| Model | Fold-0 | Fold-1 | Fold-2 | Fold-3 | Mean |
+| :- | -:| -:| -:| -:| -:|
+|ARD ✖ N ✖ Cat.✖ Per. ✖ |0.04 | 0.02 | 0.06 | 0.03 | 0.04|
+|ARD ✔ N ✖ Cat.✖ Per. ✖ |0.03 | 0.02 | 0.06 | 0.02 | 0.03|
+|ARD ✔ N ✖ Cat.✖ Per. ✔ |0.03 | 0.02 | 0.05 | 0.02 | 0.03|
+|RF                        |- | - | - | -|
+|IDW                     |- | - | - | -|
+|KNN                     |- | - | - | -|
+|XGB                     |- | - | - | -|
+|ADAIN                     |- | - | - | -|
+</details>
 
 ### London Data Experiment
 #### Preprocessing
