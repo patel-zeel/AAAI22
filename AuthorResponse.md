@@ -52,8 +52,11 @@ We totally agree with the comment and thus, we run our models on London Air Qual
 ## R2
 ### R2Q1
 **Q: The notations in the paper are very confusing. For example:**
-- **In the Problem statement section, T is defined as the number of time-stamps. However, it seems that T means the target air quality station as well.**
-- **The paper misuses bold, non-bold, uppercase, and lowercase symbols without explicit definition. For example, what is the difference between \mathbf{x}_i and x_i. What does f(X) mean in Fig. 2?**
+
+**In the Problem statement section, T is defined as the number of time-stamps. However, it seems that T means the target air quality station as well.**
+
+**The paper misuses bold, non-bold, uppercase, and lowercase symbols without explicit definition. For example, what is the difference between \mathbf{x}_i and x_i. What does f(X) mean in Fig. 2?**
+
 **A possible solution: adding a table to clarify all the used notations to increase the readability.**
 
 * We have updated the notations in [extended appendix](https://github.com/ouranonymoussubmission/AAAI22/blob/main/Appendix_v2.pdf) as shown [here](https://github.com/ouranonymoussubmission/AAAI22/blob/main/AuthorResponse.md#r1q4)
