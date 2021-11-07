@@ -31,7 +31,7 @@ A: We totally agree with the comment and thus, we run our models on London Air Q
 A: 
 * We have updated Figure 3 in the paper to show the confidence intervals on the predictions. Note that 95% confidence intervals were not clearly visiable in the figure so we show . We show a comparison between old figure (on left) and updated figure (on right)
 
-|Old figure| New Figure|
+|Old figure| Updated Figure|
 |:-:|:-:|
 |![image](https://user-images.githubusercontent.com/72247818/140639614-f8078d40-f600-4151-b512-f4e566ebfa67.png)| ![image](https://user-images.githubusercontent.com/72247818/140639645-809c72e1-cb13-4913-84e4-e665f1c898cb.png)|
 
