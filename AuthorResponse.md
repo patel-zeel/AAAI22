@@ -140,8 +140,10 @@ A predictive distribution is called well-calibrated if x% of samples lie within 
 | :- | -:| -:| -:| -:|
 |ARD ✖ N ✖ Cat.✖ Per. ✖ |37.25 | 39.86 | 36.73 | 37.95|
 |ARD ✔ N ✖ Cat.✖ Per. ✖ |23.63 | 25.52 | 25.97 | 25.04|
-|ARD ✔ N ✖ Cat.✔ Per. ✖ |22.24 | 24.74 | 25.1 | 24.03|
-|ARD ✔ N ✖ Cat.✔ Per. ✔ |22.6 | 24.96 | 25.27 | 24.28|
+|ARD ✔ N ✖ Cat.✔ Per. ✖ |22.24 | 24.74 | 25.10 | 24.03|
+|ARD ✔ N ✖ Cat.✔ Per. ✔ |22.60 | 24.96 | 25.27 | 24.28|
+|ARD ✔ N ✔ Cat.✔ Per. ✖ |24.09|27.83|26.30|26.07|
+|ARD ✔ N ✔ Cat.✔ Per. ✔ |23.48|25.18|25.47|24.71|
 |RF                        |24.86 | 29.78 | 25.4 | 26.68|
 |IDW                     |49.11 | 50 | 45.18 | 48.1|
 |KNN                     |38.09 | 38.85 | 37.02 | 37.99|
@@ -170,6 +172,8 @@ A predictive distribution is called well-calibrated if x% of samples lie within 
 
 <details>
 <summary>Mean Absolute Percentage Error (lower is better)</summary>
+
+In range 0 to 1.
 
 | Model | Fold-0 | Fold-1 | Fold-2 | Mean |
 | :- | -:| -:| -:| -:|
@@ -312,6 +316,8 @@ We perform 4-fold cross-validation by splitting the train and test sets based on
 |ARD ✖ N ✖ Cat.✖ Per. ✖	| 5.06 | 4.32 | 5.61	| 4.45 | 4.86 |
 |ARD ✔ N ✖ Cat.✖ Per. ✖	| **4.82** | 3.99 | 5.57	| 4.18 | **4.64** |
 |ARD ✔ N ✖ Cat.✖ Per. ✔	| 4.83 | **3.99** | 5.60	| **4.16** | 4.65 |
+|ARD ✔ N ✔ Cat.✖ Per. ✖| 5.32 | 5.57 | 6.57 | 4.57 | 5.51 |
+|ARD ✔ N ✔ Cat.✖ Per. ✔ | 5.14 | 4.44 | 5.00 | 5.03 | 4.90 |
 |RF	                    | 5.16 | 4.64 | **4.78** | 4.17 | 4.69 |
 |IDW	                    | 7.79 | 7.48 | 8.61 | 8.15 | 8.01 |
 |KNN	                    | 5.32 | 4.38 | 5.10 | 4.18 | 4.75 |
@@ -329,11 +335,13 @@ We perform 4-fold cross-validation by splitting the train and test sets based on
 |ARD ✖ N ✖ Cat.✖ Per. ✖	 | 3.07 | 2.93 | 3.92 | 3.38 | 3.33 |
 |ARD ✔ N ✖ Cat.✖ Per. ✖	 | **2.87** | **2.76** | 3.92 | 3.19 | **3.19** |
 |ARD ✔ N ✖ Cat.✖ Per. ✔	 | 2.88 | 2.76 | 3.98 | 3.19 | 3.20 |
+ |ARD ✔ N ✔ Cat.✖ Per. ✖| 3.39 | 3.47 | 5.03 | 3.51 | 3.85 |
+|ARD ✔ N ✔ Cat.✖ Per. ✔| 3.19 | 3.04 | 3.15 | 3.56 | 3.23 |
 |RF	                     | 2.88 | 2.76 | 3.98 | 3.19 | 3.20 |
 |IDW	                     | 2.88 | 2.76 | 3.98 | 3.19 | 3.20 |
 |KNN	                     | 3.25 | 3.16 | **3.25** | **3.15** | 3.20 |
 |XGB	                     | 3.52 | 3.31 | 3.32 | 3.62 | 3.44 |
-|ADAIN	                  |      |      |      |      |      |
+|ADAIN	                  |3.41|	3.18|	3.38|	3.47|	3.36|
 
 </details>
 
@@ -345,11 +353,13 @@ We perform 4-fold cross-validation by splitting the train and test sets based on
 |ARD ✖ N ✖ Cat.✖ Per. ✖	 |34% |29% | 87% |38% |47% |
 |ARD ✔ N ✖ Cat.✖ Per. ✖	 | 32% |27% |88% |35% |46% |
 |ARD ✔ N ✖ Cat.✖ Per. ✔	 | **32%** | **27%** |89% |**35%** |46% |
+|ARD ✔ N ✔ Cat.✖ Per. ✖  | 35% | 31% | 107% | 38% | 53% |
+|ARD ✔ N ✔ Cat.✖ Per. ✔ | 34% | 30% | 69% | 31% | 41% |
 |RF	                     |32% |30% |**71%** |36% |**42%**|
 |IDW	                     |51% |46% |131% |57% |71% |
 |KNN	                     |32% |31% |78% |35% |44% |
 |XGB	                     |40% |35% |78% |40% |48% |
-|ADAIN	                  |      |      |      |      |      |
+|ADAIN	                   |38%	|31%	|82%	|34%	|46%|
 
 </details>
 
@@ -361,11 +371,13 @@ We perform 4-fold cross-validation by splitting the train and test sets based on
 |ARD ✖ N ✖ Cat.✖ Per. ✖ |0.66 | 0.73 | 0.53 | 0.71 | 0.66|
 |ARD ✔ N ✖ Cat.✖ Per. ✖ |**0.69** | **0.77** | 0.54 | **0.74** | **0.69**|
 |ARD ✔ N ✖ Cat.✖ Per. ✔ |**0.69** | **0.77** | **0.53** | **0.74** | 0.68|
+|ARD ✔ N ✔ Cat.✖ Per. ✖ | 0.62 | 0.56 | 0.36 | 0.69 | 0.56 |
+|ARD ✔ N ✔ Cat.✖ Per. ✔ | 0.65 | 0.72 | 0.63 | 0.63 | 0.65 |
 |RF                        |0.64 | 0.69 | 0.66 | 0.74 | 0.68|
 |IDW                     |0.19 | 0.20 | -0.10 | 0.02 | 0.08|
 |KNN                     |0.62 | 0.73 | 0.61 | 0.74 | 0.68|
 |XGB                     |0.60 | 0.70 | 0.65 | 0.67 | 0.66|
-|ADAIN	                  |      |      |      |      |      |
+|ADAIN	                  |0.63|	0.72|	0.64|	0.70|	0.67|
 
 </details>
 
@@ -374,9 +386,11 @@ We perform 4-fold cross-validation by splitting the train and test sets based on
 
 | Model | Fold-0 | Fold-1 | Fold-2 | Fold-3 | Mean |
 | :- | -:| -:| -:| -:| -:|
-|ARD ✖ N ✖ Cat.✖ Per. ✖ |**12,905.88** | 11,909.78 | 10,528.24 | 10,347.43| 11,422.83 |
-|ARD ✔ N ✖ Cat.✖ Per. ✖ |13,046.91 | 11,691.14 | **10,261.17** | 9,994.86| **11,248.52** |
-|ARD ✔ N ✖ Cat.✖ Per. ✔ |13,226.03 | **11,659.61** | 10,284.22 | **9,926.65**| 11,274.13 |
+|ARD ✖ N ✖ Cat.✖ Per. ✖ |12,905.88 | 11,909.78 | 10,528.24 | 10,347.43| 11,422.83 |
+|ARD ✔ N ✖ Cat.✖ Per. ✖ |13,046.91 | 11,691.14 | 10,261.17 | 9,994.86| 11,248.52 |
+|ARD ✔ N ✖ Cat.✖ Per. ✔ |13,226.03 | 11,659.61 | 10,284.22 | 9,926.65| 11,274.13 |
+|ARD ✔ N ✔ Cat.✖ Per. ✖ | 12300.62 | 12201.10 | 10220.89 | 10155.14 | 11219.44 |
+|ARD ✔ N ✔ Cat.✖ Per. ✔  | 12186.75 | 11929.85 | 9950.99 | 10285.31 | 11088.23 |
 |RF                        |- | - | - | -|
 |IDW                     |- | - | - | -|
 |KNN                     |- | - | - | -|
@@ -390,9 +404,11 @@ We perform 4-fold cross-validation by splitting the train and test sets based on
 
 | Model | Fold-0 | Fold-1 | Fold-2 | Fold-3 | Mean |
 | :- | -:| -:| -:| -:| -:|
-|ARD ✖ N ✖ Cat.✖ Per. ✖ |3.25 | 2.92 | **3.39** | 3.04 | 3.15|
-|ARD ✔ N ✖ Cat.✖ Per. ✖ |**3.21** | **2.83** | 3.42 | 2.94 | **3.10**|
-|ARD ✔ N ✖ Cat.✖ Per. ✔ |3.28 | 2.84 | 3.42 | **2.93** | 3.12|
+|ARD ✖ N ✖ Cat.✖ Per. ✖ |3.25 | 2.92 | 3.39 | 3.04 | 3.15|
+|ARD ✔ N ✖ Cat.✖ Per. ✖ |3.21 | 2.83 | 3.42 | 2.94 | 3.10|
+|ARD ✔ N ✖ Cat.✖ Per. ✔ |3.28 | 2.84 | 3.42 | 2.93 | 3.12|
+ |ARD ✔ N ✔ Cat.✖ Per. ✖ | 3.03 | 3.05 | 3.23 | 2.97 | 3.07 |
+|ARD ✔ N ✔ Cat.✖ Per. ✔ | 2.99 | 2.92 | 2.85 | 3.02 | 2.95 |
 |RF                        |- | - | - | -|
 |IDW                     |- | - | - | -|
 |KNN                     |- | - | - | -|
@@ -407,7 +423,9 @@ We perform 4-fold cross-validation by splitting the train and test sets based on
 | :- | -:| -:| -:| -:| -:|
 |ARD ✖ N ✖ Cat.✖ Per. ✖ |0.02 | 0.02 | 0.10 | 0.12 | 0.07|
 |ARD ✔ N ✖ Cat.✖ Per. ✖ |0.03 | 0.03 | 0.11 | 0.10 | 0.07|
-|ARD ✔ N ✖ Cat.✖ Per. ✔ |**0.01** | **0.02** | **0.10** | **0.10** | **0.06**|
+|ARD ✔ N ✖ Cat.✖ Per. ✔ |0.01 | 0.02 | 0.10 | 0.10 | 0.06|
+ |ARD ✔ N ✔ Cat.✖ Per. ✖| 0.14 | 0.15 | 0.02 | 0.09 | 0.10 |
+|ARD ✔ N ✔ Cat.✖ Per. ✔ | 0.12 | 0.17 | 0.15 | 0.10 | 0.13 |
 |RF                        |- | - | - | -|
 |IDW                     |- | - | - | -|
 |KNN                     |- | - | - | -|
@@ -423,6 +441,8 @@ We perform 4-fold cross-validation by splitting the train and test sets based on
 |ARD ✖ N ✖ Cat.✖ Per. ✖ |0.04 | 0.03 | 0.09 | 0.09 | 0.06|
 |ARD ✔ N ✖ Cat.✖ Per. ✖ |0.04 | 0.03 | 0.12 | 0.07 | 0.06|
 |ARD ✔ N ✖ Cat.✖ Per. ✔ |0.05 | 0.03 | 0.12 | 0.07 | 0.07|
+|ARD ✔ N ✔ Cat.✖ Per. ✖ | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 |
+|ARD ✔ N ✔ Cat.✖ Per. ✔| 0.01 | 0.03 | 0.03 | 0.01 | 0.02 |
 |RF                        |- | - | - | -|
 |IDW                     |- | - | - | -|
 |KNN                     |- | - | - | -|
@@ -438,6 +458,8 @@ We perform 4-fold cross-validation by splitting the train and test sets based on
 |ARD ✖ N ✖ Cat.✖ Per. ✖ |0.04 | 0.02 | 0.06 | 0.03 | 0.04|
 |ARD ✔ N ✖ Cat.✖ Per. ✖ |0.03 | 0.02 | 0.06 | 0.02 | 0.03|
 |ARD ✔ N ✖ Cat.✖ Per. ✔ |0.03 | 0.02 | 0.05 | 0.02 | 0.03|
+|ARD ✔ N ✔ Cat.✖ Per. ✖ | 0.02 | 0.01 | 0.01 | 0.01 | 0.01 |
+|ARD ✔ N ✔ Cat.✖ Per. ✔ | 0.02 | 0.01 | 0.01 | 0.01 | 0.01 |
 |RF                        |- | - | - | -|
 |IDW                     |- | - | - | -|
 |KNN                     |- | - | - | -|
