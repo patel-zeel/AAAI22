@@ -117,7 +117,7 @@ Our model can be used as a generic regression model but is especially suited for
 
 To extend our experiments to larger datasets, we can either omit the baselines requiring contiguous datasets or fill the missing data accurately. We are investigating time-series models to interpolate the missing data accurately. As such, our proposed techniques are general and can be applied immediately to various cities having air quality monitoring.
 
-### Probabilistic metrics
+## Probabilistic metrics
 
 * Negative Log Predictive Density (NLPD)
 
@@ -131,7 +131,7 @@ Standardized Log Loss (LL) is negative log probability of sampling a test data p
 
 A predictive distribution is called well-calibrated if x% of samples lie within x% confidence interval. For example, 95% of the test samples should lie within 95% confidence interval. Coverage error for x% confidence interval is an absolute difference between (x/100) and fraction of samples falling within x% confidence interval. For more details, please visit the reference.
 
-### Evaluation of Models on Beijing Dataset with an extended set of metrics
+## Evaluation of Models on Beijing Dataset with an extended set of metrics
 
 <details open>
 <summary>Root Mean Squared Error (lower is better)</summary>
@@ -284,16 +284,16 @@ A predictive distribution is called well-calibrated if x% of samples lie within 
 |ADAIN                     |- | - | - | -|
 </details>
 
-### London Data Experiment
-#### Preprocessing
+## London Data Experiment
+### Preprocessing
 In KDD Cup 2018 challenge, London air quality dataset (PM2.5, Latitude and Longitude) is provided along with the grid-wise meteorological data of the London city. To map the meteorological data (Temperature, Pressure, Humidity, Wind direction and Wind speed) with each air quality station, we take a distance-based weighted average (closer the station, higher the weight) of the nearest 4 grid points to the station. 
 
 In our experiments, we choose a month with the least amount of \% missing entries of the AQ variable (PM2.5) (May 2017 consists of 10.8\% missing PM2.5 entries). Note that there are no missing entries in meteorological features. Further, to address the missing entries in the 'May' London air quality dataset, we investigate the stations having a substantial amount of missing values. 2 of the 24 stations ('HR1', 'KF1') from the dataset are having 85\% of the missing PM2.5 values, and thus we remove those stations. After this step, only 1.5% entries are missing in the dataset. To fill in the missing data, we use similar method to the Beijing dataset. Also, unlike Beijing, the London AQ dataset consists only of non-categorical features, thus excluding the (ANCL) configurations with categorical kernel.
 
-#### Experimental Setup
+### Experimental Setup
 We perform 4-fold cross-validation by splitting the train and test sets based on stations. 
 
-#### Experimental Configuration
+### Experimental Configuration
 
 | Configuration | ✖ | ✔ |
 | :-: | :-: | :-: |
@@ -302,7 +302,7 @@ We perform 4-fold cross-validation by splitting the train and test sets based on
 | Cat. | Using RBF/Matern kernel for categorical features | Using Hamming distance kernel for categorical features |
 | Per. | Using RBF/Matern kernel for the time feature | Using Local Periodic kernel for the time feature |
 
-#### Results
+### Results
 
 <details open>
 <summary>Root Mean Squared Error (lower is better)</summary>
