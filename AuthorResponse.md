@@ -49,6 +49,13 @@ We totally agree with the comment and thus, we run our models on London Air Qual
 
 ![image](https://user-images.githubusercontent.com/72247818/140642296-5a562899-b0ca-4e15-b770-d2dc8b7ea255.png)
 
+## R2
+### R2Q1
+**Q: The notations in the paper are very confusing. For example:
+- **In the Problem statement section, T is defined as the number of time-stamps. However, it seems that T means the target air quality station as well.**
+- **The paper misuses bold, non-bold, uppercase, and lowercase symbols without explicit definition. For example, what is the difference between \mathbf{x}_i and x_i. What does f(X) mean in Fig. 2?**
+**A possible solution: adding a table to clarify all the used notations to increase the readability.**
+
 
 
 ### Probabilistic metrics
