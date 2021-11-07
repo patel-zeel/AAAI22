@@ -56,7 +56,10 @@ We totally agree with the comment and thus, we run our models on London Air Qual
 - **The paper misuses bold, non-bold, uppercase, and lowercase symbols without explicit definition. For example, what is the difference between \mathbf{x}_i and x_i. What does f(X) mean in Fig. 2?**
 **A possible solution: adding a table to clarify all the used notations to increase the readability.**
 
-
+* We have updated the notations and corresponding figure as the following:
+|Old figure| Updated Figure|
+|:-:|:-:|
+|![image](https://user-images.githubusercontent.com/72247818/140643133-69a51889-6096-4556-9ab6-c60723bb7178.png)| ![image](https://user-images.githubusercontent.com/72247818/140643112-571ad0dc-7955-48ce-ac0c-b2aedf4b7cfe.png)|
 
 ### Probabilistic metrics
 
