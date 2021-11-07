@@ -41,9 +41,13 @@ We totally agree with the comment and thus, we run our models on London Air Qual
 ### R2Q4
 **Q: The overall description of the kernels is sometimes hard to follow (I believe for instance that length scale in Section 4.2 is not clearly defined, Section 4.3 is a bit sketchy). Maybe after Section 4.6 the authors could also write explicitly the final proposed model ?**
 
-We agree with this comment and we have revised the confusing notations in the manucript. We have also added a notation table in [extended appendix](https://github.com/ouranonymoussubmission/AAAI22/blob/main/Appendix_v2.pdf). A snapshot of which is given below.
+* We agree with this comment and we have revised the confusing notations in the manucript. We have also added a notation table in [extended appendix](https://github.com/ouranonymoussubmission/AAAI22/blob/main/Appendix_v2.pdf). A snapshot of which is given below.
 
 ![image](https://user-images.githubusercontent.com/72247818/140640881-dac9a96e-b49c-47f8-957b-9b3eb880b676.png)
+
+* Following is the snapshot of final model description from updated manuscript.
+
+![image](https://user-images.githubusercontent.com/72247818/140642249-80688776-e15c-42f0-a144-d4f530111a23.png)
 
 
 ### Probabilistic metrics
