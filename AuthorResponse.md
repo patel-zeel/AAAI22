@@ -28,7 +28,16 @@ A: We totally agree with the comment and thus, we run our models on London Air Q
 ### R1Q3
 **Q: In the introduction, the authors highlight that data-driven approaches do not quantify uncertainty. The proposed method, based on Gaussian processes which are well understood in statistics could overcome this difficulty. However the authors only report RMSE on their predictions. Is this possible to provide confidence intervals on the prediction to quantify uncertainty ?**
 
-A: We update image. We have provided the results with an extended set of metrics on [Beijing dataset](https://github.com/ouranonymoussubmission/AAAI22/blob/main/AuthorResponse.md#evaluation-of-models-on-beijing-dataset-with-an-extended-set-of-metrics) and [London dataset](https://github.com/ouranonymoussubmission/AAAI22/blob/main/AuthorResponse.md#results).
+A: 
+* We have updated Figure 3 in the paper to show the confidence intervals on the predictions. Note that 95% confidence intervals were not clearly visiable in the figure so we show . We show a comparison between old figure (on left) and updated figure (on right)
+
+|Old figure| New Figure|
+|:-:|:-:|
+|![]()   | ![]()|
+
+
+
+* We have provided the results with an extended set of metrics on [Beijing dataset](https://github.com/ouranonymoussubmission/AAAI22/blob/main/AuthorResponse.md#evaluation-of-models-on-beijing-dataset-with-an-extended-set-of-metrics) and [London dataset](https://github.com/ouranonymoussubmission/AAAI22/blob/main/AuthorResponse.md#results).
 
 ---
 
