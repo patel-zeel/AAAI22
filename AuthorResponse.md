@@ -47,7 +47,8 @@ We totally agree with the comment and thus, we run our models on London Air Qual
 
 * Following is the snapshot of final model description from updated manuscript.
 
-![image](https://user-images.githubusercontent.com/72247818/140642249-80688776-e15c-42f0-a144-d4f530111a23.png)
+![image](https://user-images.githubusercontent.com/72247818/140642296-5a562899-b0ca-4e15-b770-d2dc8b7ea255.png)
+
 
 
 ### Probabilistic metrics
