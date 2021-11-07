@@ -28,7 +28,7 @@ We totally agree with the comment and thus, we run our models on London Air Qual
 ### R1Q3
 **Q: In the introduction, the authors highlight that data-driven approaches do not quantify uncertainty. The proposed method, based on Gaussian processes which are well understood in statistics could overcome this difficulty. However the authors only report RMSE on their predictions. Is this possible to provide confidence intervals on the prediction to quantify uncertainty ?**
 
-* We have updated Figure 3 in the paper to show the confidence intervals on the predictions. Note that 95% confidence intervals were not clearly visiable in the figure so we show . We show a comparison between old figure (on left) and updated figure (on right)
+* We have updated Figure 3 in the paper to show the confidence intervals on the predictions . Here we show a comparison between old figure (on left) and updated figure (on right)
 
 |Old figure| Updated Figure|
 |:-:|:-:|
