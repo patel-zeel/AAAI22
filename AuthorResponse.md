@@ -11,6 +11,7 @@ Click on any of the links below to naviagate to corresponding sections.
 * [Reviewer 3](https://github.com/ouranonymoussubmission/AAAI22/blob/main/AuthorResponse.md#r3)
 * [Reviewer 4](https://github.com/ouranonymoussubmission/AAAI22/blob/main/AuthorResponse.md#r4)
 * [London Data Experiment](https://github.com/ouranonymoussubmission/AAAI22/blob/main/AuthorResponse.md#london-data-experiment)
+* [Evaluation of Models on Beijing Dataset with an extended set of metrics]()
 
 ## R1
 ### R1Q1
@@ -24,8 +25,15 @@ data filling. Obviously dealing with missing data is required for real-life data
 
 A: We totally agree with the comment and thus, we run our models on London Air Quality dataset given in [KDD Cup 2018](https://www.kdd.org/kdd2018/kdd-cup). We found that our model still outperforms all the baselines with multiple metrics. Click [here](https://github.com/ouranonymoussubmission/AAAI22/blob/main/AuthorResponse.md#london-data-experiment) to navigate to the further details/results.
 
+### R1Q3
+**Q: In the introduction, the authors highlight that data-driven approaches do not quantify uncertainty. The proposed method, based on Gaussian processes which are well understood in statistics could overcome this difficulty. However the authors only report RMSE on their predictions. Is this possible to provide confidence intervals on the prediction to quantify uncertainty ?**
+
+A: We have reported 
 
 ---
+
+### Evaluation of Models on Beijing Dataset with an extended set of metrics 
+
 
 ### London Data Experiment
 #### Preprocessing
