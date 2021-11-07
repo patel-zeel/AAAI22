@@ -89,6 +89,21 @@ We have added detailed introduction to ARD in Section E in the [updated appendix
 
 Please see the response [here](https://github.com/ouranonymoussubmission/AAAI22/blob/main/AuthorResponse.md#r1q3)
 
+### R2Q5
+**Q: The paper utilizes the Beijing air quality dataset for the experiments. It would good to evaluate the proposed model in more datasets, such as London air quality dataset (available at the KDD-18 cup website).**
+
+Please see the response [here](https://github.com/ouranonymoussubmission/AAAI22/blob/main/AuthorResponse.md#r1q2)
+
+### R2Q6
+**Q:  The authors are encouraged to add more evaluation metrics. To the best of my knowledge, the common metrics in this application include RMSE, MAE, MAPE, R^2, etc. They help us evaluate the approaches from different views.**
+
+We have provided the results with an extended set of metrics on [Beijing dataset](https://github.com/ouranonymoussubmission/AAAI22/blob/main/AuthorResponse.md#evaluation-of-models-on-beijing-dataset-with-an-extended-set-of-metrics) and [London dataset](https://github.com/ouranonymoussubmission/AAAI22/blob/main/AuthorResponse.md#results).
+
+### R2Q7
+**Q: Some important baselines/related works are missing. As far as I know, there are some papers published at top venues also focusing on the spatio-temporal imputation problem. These studies can definitely be applied to the air quality inference task, such as Kriging Convolutional Networks (KCN), Inductive Graph Neural Networks for Spatiotemporal Kriging (IGNNK), and GP-based methods like SGPRN (Scalable Gaussian Process Regression Networks). To improve its significance, comparing the proposed model with them is needed.**
+
+We have compared our model with the suggested KCN (kcn\_sage) baseline on the Beijing dataset. With a non-exhaustive but sufficient hyperparameter tuning, we found that KCN achieves train and test RMSE of $25$ and $45$ compared to $10$ and $25$ for our models. We have also tried to run Scalable Gaussian Process Regression Networks (SGPRN) on our dataset, but it does not scale for our dataset size. Scalability in SGPRN corresponds to dimensions of multi-output observations. Also, we find that authors have tested their code on 450 datapoints compared to $>14K$ datapoints in our case. Given these concerns with suggested baselines, we do not yet compare with them in the main table but will consult the respective authors to understand these better and potentially include comparisons in the camera-ready.
+
 ### Probabilistic metrics
 
 * Negative Log Predictive Density (NLPD)
