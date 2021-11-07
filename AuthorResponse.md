@@ -59,7 +59,7 @@ We totally agree with the comment and thus, we run our models on London Air Qual
 
 **A possible solution: adding a table to clarify all the used notations to increase the readability.**
 
-* We have updated the notations in [extended appendix](https://github.com/ouranonymoussubmission/AAAI22/blob/main/Appendix_v2.pdf) as shown [here](https://github.com/ouranonymoussubmission/AAAI22/blob/main/AuthorResponse.md#r1q4)
+* We have updated the notations in Section B in [extended appendix](https://github.com/ouranonymoussubmission/AAAI22/blob/main/Appendix_v2.pdf) as shown [here](https://github.com/ouranonymoussubmission/AAAI22/blob/main/AuthorResponse.md#r1q4)
 * We have updated corresponding figure as the following:
 
 |Old figure| Updated Figure|
@@ -72,6 +72,21 @@ We totally agree with the comment and thus, we run our models on London Air Qual
 |:-:|:-:|
 |![image](https://user-images.githubusercontent.com/72247818/140643311-1583b85d-d20a-4fa8-b200-11294d35affa.png)| ![image](https://user-images.githubusercontent.com/72247818/140643325-2b161bb8-f177-4c24-98a6-94ccd0b537de.png)|
 
+
+### R2Q2
+**Q: This paper omits the derivation of formulas like Eq. 4, 8, 9, 10. Despite the page limit, it would be good to mention them in the appendix.**
+
+We have added the derivations in Sections C and D in the [updated appendix](https://github.com/ouranonymoussubmission/AAAI22/blob/main/Appendix_v2.pdf).
+
+### R2Q3
+**Q:  Details of the automatic relevance determination are missing. The paper describes the idea of this module but does not give more details.**
+
+We have added detailed introduction to ARD in Section E in the [updated appendix](https://github.com/ouranonymoussubmission/AAAI22/blob/main/Appendix_v2.pdf).
+
+### R2Q4
+**Q: This paper claims that the proposed approach implicitly provides uncertainty estimates along with predictions. However, there is no justification e.g., by either theoretical or experimental evaluation. To me, this claim is not convincing enough.**
+
+Please see the response [here](https://github.com/ouranonymoussubmission/AAAI22/blob/main/AuthorResponse.md#r1q3)
 
 ### Probabilistic metrics
 
