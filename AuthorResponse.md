@@ -104,7 +104,7 @@ We have compared our model with the suggested KCN (kcn_sage) baseline on the Bei
 ### R3Q1
 **Q: Can you provide an intuition to the non stationary model under-performing?**
 
-Using probabilistic metrics, we found that non-stationary models perform betterthan the stationary models on Beijing and London datasets. In the future, we plan to selectively add non-stationarity tobalance between flexibility and model performance.
+Using probabilistic metrics, we found that non-stationary models perform better than the stationary models on Beijing and London datasets. In the future, we plan to selectively add non-stationarity tobalance between flexibility and model performance.
  
 ### R3Q2
 **Q: Would other applications benefit from your approach? if so which part?**
