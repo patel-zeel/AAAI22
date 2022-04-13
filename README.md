@@ -1,5 +1,5 @@
 # AAAI22
-
+* [PDF](https://nipunbatra.github.io/papers/2022/aaai_22_air.pdf)
 * [Author Response during the rebuttal](AuthorResponse.md)
 * [Appendix](appendix.pdf)
 
