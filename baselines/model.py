@@ -1,3 +1,11 @@
+"""
+Disclaimer:
+
+This is our own implementation of "A Neural Attention Model for Urban Air Quality Inference: Learning the Weights of Monitoring Stations" paper produced after
+consulting with the original authors. Please note that this is not the original code used in the original paper, so if this code is used to reproduce the original
+paper, it may not give the exact same results but should give similar results.
+"""
+
 import numpy as np
 import tensorflow as tf
 from tensorflow.keras.models import Model
