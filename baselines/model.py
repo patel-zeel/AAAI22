@@ -3,7 +3,7 @@ Disclaimer:
 
 This is our own implementation of "A Neural Attention Model for Urban Air Quality Inference: Learning the Weights of Monitoring Stations" (ADAIN) paper 
 produced after consulting with the original authors. Please note that this is not the original code used in the ADAIN paper, so if this code is 
-used to reproduce the ADAIN paper, it may not give the exact same results but should give similar results.
+used to reproduce the ADAIN paper, it may not give the exact same results but expected to give similar results.
 """
 
 import numpy as np
