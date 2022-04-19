@@ -34,3 +34,7 @@
 | stat_gp_cat   | Stationary GP with categorical kernel (```C``` fixed, ```L``` variable)|
 | stat_gp_no_cat | Stationary GP without categorical kernel (```C_bar``` fixed, ```L``` variable) |
 | nonstat_gp_cat | Non-stationary GP with categorical kernel (```C``` fixed, ```L``` variable) |
+
+## Baselines
+
+Baseline implementation of paper "A Neural Attention Model for Urban Air Quality Inference: Learning the Weights of Monitoring Stations" (ADAIN) is available in [this file](https://github.com/patel-zeel/AAAI22/blob/main/baselines/model.py).
