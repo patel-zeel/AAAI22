@@ -6,7 +6,7 @@ import torch
 import gpytorch
 from matplotlib import pyplot as plt
 from tqdm import trange
-from early_stopping_pytorch.pytorchtools import EarlyStopping
+from pytorchtools import EarlyStopping
 import pandas as pd
 import numpy as np
 from sklearn.metrics import mean_squared_error

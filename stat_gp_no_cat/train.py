@@ -7,7 +7,7 @@ import gpytorch
 from matplotlib import pyplot as plt
 from tqdm import trange
 # %cd 
-from early_stopping_pytorch.pytorchtools import EarlyStopping
+from pytorchtools import EarlyStopping
 import pandas as pd
 import numpy as np
 from sklearn.metrics import mean_squared_error
@@ -31,7 +31,8 @@ def train_model(model, train_x, train_y, epochs=200, warm_up=5, lr=0.1, random_s
         torch.nn.init.constant(model.covar_module.base_kernel.raw_period_length,5)
     except:
         pass
-    print("Initial Period Length:", model.covar_module.base_kernel.raw_period_length)
+    if isinstance(model.covar_module.base_kernel, gpytorch.kernels.PeriodicKernel):
+        print("Initial Period Length:", model.covar_module.base_kernel.raw_period_length)
     early_stopping = EarlyStopping(patience=warm_up)
     
     model.train()
@@ -120,7 +121,8 @@ kwargs= {'epochs':400, 'warm_up':5, 'lr':0.05, 'random_state':random_state}
 loss = train_model(model, train_x, train_y, **kwargs)
 observed_pred = predict(model, test_x) + DELTA
 
-print("Learnt Period Length:", model.covar_module.base_kernel.raw_period_length)
+if isinstance(model.covar_module.base_kernel, gpytorch.kernels.PeriodicKernel):
+    print("Learnt Period Length:", model.covar_module.base_kernel.raw_period_length)
 print("Loss: ", loss)
 print("RMSE: ", math.sqrt(mean_squared_error(test_y, observed_pred.mean.cpu())))
 

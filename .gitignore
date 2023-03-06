@@ -1,3 +1,4 @@
+*.pt
 *.pyc
 *.sh
 logs/*.txt
