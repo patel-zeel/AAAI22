@@ -3,6 +3,19 @@
 * [Author Response during the rebuttal](AuthorResponse.md)
 * [Appendix](appendix.pdf)
 
+## Setup
+1. Install nsgp-torch package
+```bash
+pip install git+https://github.com/patel-zeel/nsgp-torch
+```
+
+2. Install other dependencies
+```bash
+pip install -r requirements.txt
+```
+
+3. Run the experiments from individual folders.
+
 ## Main approach configuration
 
 ### Encoding

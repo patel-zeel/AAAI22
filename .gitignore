@@ -1,0 +1,6 @@
+*.pyc
+*.sh
+logs/*.txt
+experiments/results/*.model
+experiments/results/*.res
+experiments/results/*.time
