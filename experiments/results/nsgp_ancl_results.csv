@@ -1,0 +1,2 @@
+config,latex,rmse,mae,r2,category_accuracy,off_by_one_accuracy,threshold_90_accuracy
+A_N_C_L_bar,ANC\bar{L},26.53684552798424,17.10441553251591,0.8739809002975171,0.6707437275985663,0.9528225806451612,0.9163978494623656
